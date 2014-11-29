@@ -1,0 +1,13 @@
+<ng-include  src="'components/header/header.html'"></ng-include>
+<div class="container">
+<br><br>
+  <div class="row text-center" >
+    <div class="col-xs-2"  ng-repeat = "round in rounds">
+      	<div class="list-group">
+      		<a class="list-group-item active" >{{round}}</a>
+        	<a ng-repeat="player in players[$index]" class="list-group-item">{{player.name}}</a>
+      	</div>
+  	</div>
+  </div>
+</div>
+

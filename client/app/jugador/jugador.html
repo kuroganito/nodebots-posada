@@ -1,0 +1,12 @@
+<ng-include  src="'components/header/header.html'"></ng-include>
+
+	<div class="form-game">
+		<form ng-submit="sendName()" role="form">
+		  <div class="form-group">
+		    <label for="name">Nombre</label>
+		    <input type="text" class="form-control" ng-model="name" id="name" required>
+		  </div>
+		  <button type="submit"  class="btn btn-default">Jugar</button>
+		</form>
+
+	</div>
