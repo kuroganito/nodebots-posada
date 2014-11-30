@@ -12,3 +12,8 @@ En la ruta /jugador se conectan cada uno de participantes, colocando un nombre.
 El proyecto esta basado en el template
 
 https://github.com/DaftMonk/generator-angular-fullstack
+
+
+Se agrego la ruta /panel donde se controlara el flujo del juego.
+
+Se agrego un timer para que los jugadores se agreguen y despues comience el juego.

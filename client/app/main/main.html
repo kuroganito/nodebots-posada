@@ -1,6 +1,11 @@
 <ng-include  src="'components/header/header.html'"></ng-include>
 <div class="container">
-<br><br>
+<br>
+	<div class="row text-center" >
+		<div class="alert alert-success" role="alert">{{statusMsg}} {{timer}}
+		</div>	
+		
+	</div>
   <div class="row text-center" >
     <div class="col-xs-2"  ng-repeat = "round in rounds">
       	<div class="list-group">

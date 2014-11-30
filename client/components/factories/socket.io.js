@@ -5,6 +5,7 @@ angular.module('nodebotsApp')
 	  var socket = io.connect();
 	  return {
 	    on: function (eventName, callback) {
+	      console.log("Reciviendo: " + eventName )
 	      socket.on(eventName, function () {  
 	        var args = arguments;
 	        $rootScope.$apply(function () {
@@ -13,6 +14,7 @@ angular.module('nodebotsApp')
 	      });
 	    },
 	    emit: function (eventName, data, callback) {
+		  console.log("Emitiendo: " + eventName )
 	      socket.emit(eventName, data, function () {
 	        var args = arguments;
 	        $rootScope.$apply(function () {
