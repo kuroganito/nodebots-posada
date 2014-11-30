@@ -6,8 +6,12 @@ angular.module('nodebotsApp')
       var WATING_PLAYERS = 1;
       var GAME_START = 2;
 
+      
+
+
    	$scope.players = [[]];
    	$scope.rounds = [];
+      $scope.actualRound = 0;
       $scope.timer;
 
       $scope.statusMsg = "";
@@ -28,6 +32,19 @@ angular.module('nodebotsApp')
       socket.on("chageStatus",function(status){
          $scope.status = status;
          setStatus();
+      });
+
+      socket.on("win",function(id){
+         console.log($scope.players)
+         console.log(id)
+         
+         $scope.players[$scope.actualRound].forEach(function(player){
+            if(player.id == id){
+               console.log("Enconte socket")
+               player.class = ' list-group-item-success';
+               $scope.players[$scope.actualRound+1].push(player);
+            }
+         });
       });
 
       function setStatus(){
